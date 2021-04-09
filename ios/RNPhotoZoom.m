@@ -465,8 +465,8 @@
     self.backgroundColor = [UIColor clearColor];
     self.delegate = self;
     self.decelerationRate = UIScrollViewDecelerationRateFast;
-    self.showsVerticalScrollIndicator = YES;
-    self.showsHorizontalScrollIndicator = YES;
+    self.showsVerticalScrollIndicator = NO;
+    self.showsHorizontalScrollIndicator = NO;
 
     // Tap view for background
     _tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
