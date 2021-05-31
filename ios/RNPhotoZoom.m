@@ -45,9 +45,7 @@
     return _photoImageView;
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-	printf("DRAG1");
-}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {}
 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
     self.scrollEnabled = YES; // reset
@@ -468,7 +466,6 @@
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
-	self.scrollEnabled = YES;
 
     // Tap view for background
     _tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
