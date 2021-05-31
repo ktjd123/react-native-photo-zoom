@@ -46,7 +46,7 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-
+	printf("DRAG1");
 }
 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
@@ -209,7 +209,8 @@
     }
 
     // Disable scrolling initially until the first pinch to fix issues with swiping on an initally zoomed in photo
-    self.scrollEnabled = NO;
+	// This line prevents scroll. Ha....
+	// self.scrollEnabled = NO;
 
     // Layout
     [self setNeedsLayout];
@@ -467,6 +468,7 @@
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;
+	self.scrollEnabled = YES;
 
     // Tap view for background
     _tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
