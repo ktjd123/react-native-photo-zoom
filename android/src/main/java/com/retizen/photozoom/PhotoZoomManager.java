@@ -60,6 +60,10 @@ public class PhotoZoomManager extends SimpleViewManager<PhotoZoom> {
 
     @ReactProp(name = "minimumZoomScale")
     public void setMinimumZoomScale(PhotoZoom view, float minimumZoomScale) {
+        if(minimumZoomScale > 1.75F) {
+            double mediumZoomScale = minimumZoomScale + 0.1;
+            view.setMediumScale((float) mediumZoomScale);
+        }
         view.setMinimumScale(minimumZoomScale);
     }
 
